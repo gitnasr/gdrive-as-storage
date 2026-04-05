@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * drive-bucket-node init wizard
+ * gdrive-as-storage init wizard
  *
- * Invoked via: npx drive-bucket-node init
+ * Invoked via: npx gdrive-as-storage
  *
  * Runs an OAuth 2.0 installed-app flow:
  *   1. Prompts for client_id + client_secret
@@ -64,7 +64,7 @@ function waitForCallback(
 async function main(): Promise<void> {
   const rl = createInterface({ input, output });
 
-  console.log('\ndrive-bucket-node Setup Wizard');
+  console.log('\ngdrive-as-storage Setup Wizard');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
   console.log('You need an OAuth 2.0 Client ID and Secret from Google Cloud Console.');
   console.log('Go to: APIs & Services → Credentials → Create Credentials → OAuth client ID');
@@ -126,7 +126,7 @@ async function main(): Promise<void> {
     const envPath = path.resolve(process.cwd(), '.env');
     const envLines = [
       '',
-      '# Added by drive-bucket-node init',
+      '# Added by gdrive-as-storage init',
       `DRIVE_CLIENT_ID="${clientId}"`,
       `DRIVE_CLIENT_SECRET="${clientSecret}"`,
       `DRIVE_REFRESH_TOKEN="${refreshToken}"`,
@@ -138,7 +138,7 @@ async function main(): Promise<void> {
     console.log(`\nAppended credentials to ${envPath}\n`);
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     console.log('Initialise the client in your app:\n');
-    console.log('  import { DriveStorage } from "drive-bucket-node";');
+    console.log('  import { DriveStorage } from "gdrive-as-storage";');
     console.log('  const storage = new DriveStorage({');
     console.log('    clientId:     process.env.DRIVE_CLIENT_ID!,');
     console.log('    clientSecret: process.env.DRIVE_CLIENT_SECRET!,');

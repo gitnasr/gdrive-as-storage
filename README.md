@@ -18,9 +18,12 @@ Use Google Drive as a Node.js storage backend with an S3-like interface.
 npm install gdrive-as-storage
 ```
 
+> Requires Node.js 18 or later.
+
 ## Quick Start
 
 ```typescript
+import 'dotenv/config'; // load .env file
 import { DriveStorage } from 'gdrive-as-storage';
 import { createReadStream } from 'fs';
 
@@ -47,7 +50,7 @@ console.log(result.viewUrl);     // Google Drive viewer link
 3. Go to **APIs & Services → Credentials → Create Credentials → OAuth client ID**.
    - Application type: **Desktop app**
    - Note your **Client ID** and **Client Secret**.
-4. Run the interactive setup wizard. It opens a browser for Google sign-in, captures the OAuth callback, and appends credentials to your `.env` file:
+4. Run the interactive setup wizard. It will prompt for your **Client ID** and **Client Secret**, then open a browser for Google sign-in, capture the OAuth callback, and append credentials to your `.env` file:
 
 ```bash
 npx gdrive-as-storage
@@ -83,7 +86,7 @@ DRIVE_ROOT_FOLDER_ID="..."
 | `fileStream` | `Readable` | ✓ | Node.js Readable stream of the file contents |
 | `mimeType` | `string` | — | MIME type override; inferred from extension if omitted |
 | `isPublic` | `boolean` | — | Make the file publicly readable (default: `false`) |
-| `onProgress` | `(bytesUploaded: number) => void` | — | Called periodically with bytes uploaded so far |
+| `onProgress` | `(bytesUploaded: number) => void` | — | Called periodically with bytes read from the source stream |
 
 Returns:
 
