@@ -1,9 +1,11 @@
 {
   "name": "gdrive-as-storage",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Node.js library that allows you to use Google Drive as a storage solution, providing an S3-like interface for file operations.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "author": "Mahmoud Nasr <dev@gitnasr.com>",
+  "displayName": "Google Drive As Storage",
   "bin": {
     "gdrive-as-storage": "dist/bin/init.js"
   },
@@ -19,7 +21,8 @@
     "storage",
     "s3",
     "googleapis",
-    "cloud-storage"
+    "cloud-storage",
+    "gitnasr"
   ],
   "license": "MIT",
   "engines": {
