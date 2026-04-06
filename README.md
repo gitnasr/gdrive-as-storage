@@ -4,6 +4,12 @@ Use Google Drive as a Node.js storage backend with an S3-like interface.
 
 [![npm version](https://img.shields.io/npm/v/gdrive-as-storage.svg)](https://www.npmjs.com/package/gdrive-as-storage)
 
+
+
+https://github.com/user-attachments/assets/d847a21d-7043-4205-8d84-9b98f85f9e28
+
+
+
 ## Features
 
 - **S3-style slash paths** — write to `/images/avatar.jpg` and intermediate folders are created automatically
