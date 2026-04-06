@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "author": "Mahmoud Nasr <dev@gitnasr.com>",
   "displayName": "Google Drive As Storage",
+  "homepage": "https://github.com/gitnasr/gdrive-as-storage"
   "bin": {
     "gdrive-as-storage": "dist/bin/init.js"
   },
